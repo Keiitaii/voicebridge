@@ -1,0 +1,28 @@
+# Per-user state generated at runtime
+config.json
+vscode-data/
+vscode-ext/anthropic.claude-code-*/
+.last_prompt.txt
+.last_assistant.txt
+.last_transcribe.txt
+.devices.json
+.ffplay.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store

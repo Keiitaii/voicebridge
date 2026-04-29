@@ -1,0 +1,55 @@
+{
+  "workspace": "",
+  "wake_words": ["小助手", "嘿 Claude", "hey claude"],
+  "end_words": ["再见", "结束对话", "拜拜", "byebye"],
+  "interrupt_hotkey": "ctrl+shift+space",
+  "bridge": {
+    "url": "http://127.0.0.1:43117"
+  },
+  "audio": {
+    "input_device": null,
+    "sample_rate": 16000,
+    "vad_threshold": 0.5,
+    "pause_segment_s": 2.0,
+    "pause_submit_s": 4.0,
+    "aec_enabled": false,
+    "loopback_device": null
+  },
+  "analyze": {
+    "sound_tag": true,
+    "emotion": false,
+    "emotion_models": {
+      "zh": "iic/emotion2vec_plus_seed",
+      "en": "superb/wav2vec2-base-superb-er"
+    }
+  },
+  "asr": {
+    "monitor_model": "small",
+    "main_model": "large-v3-turbo",
+    "device": "cuda",
+    "compute_type": "float16",
+    "language": "zh"
+  },
+  "tts": {
+    "backend": "edge",
+    "edge": {
+      "voice": "zh-CN-XiaoyiNeural",
+      "rate": "+0%",
+      "volume": "+0%",
+      "pitch": "+0Hz"
+    },
+    "openai": {
+      "url": "http://localhost:8001/v1/audio/speech",
+      "api_key": "",
+      "model": "tts-1",
+      "voice": "alloy",
+      "format": "mp3",
+      "speed": 1.0
+    },
+    "python": {
+      "path": "",
+      "factory": "make_backend",
+      "kwargs": {}
+    }
+  }
+}
