@@ -1,0 +1,26 @@
+{
+  "name": "voice-bridge",
+  "displayName": "Voice Bridge",
+  "description": "Bridge between voicebridge agent and Claude Code terminal",
+  "version": "0.1.0",
+  "publisher": "voicebridge",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "voice-bridge.status",
+        "title": "Voice Bridge: Show Status"
+      },
+      {
+        "command": "voice-bridge.restartClaude",
+        "title": "Voice Bridge: Restart Claude Terminal"
+      }
+    ]
+  }
+}
